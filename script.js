@@ -136,23 +136,23 @@ async function sendConfDraft(name,email,type){
     body:JSON.stringify({
       model:'claude-sonnet-4-20250514',max_tokens:400,
       system:'Create a Gmail draft immediately using the create_draft tool. No explanation.',
-      messages:[{role:'user',content:`Gmail draft. To: ${email}. Subject: You're registered — EVERY KNEE BOW (07 June). Body: Hi ${name},
+      messages:[{role:'user',content:`Gmail draft. To: ${email}. Subject: You're registered — FATHER'S LOVE – WORSHIP EXPERIENCE (07 June). Body: Hi ${name},
 
-Your registration is confirmed for Every Knee Bow (2nd Edition).
+Your registration is confirmed for Father's Love – Worship Experience (2nd Edition).
 
-DATE: Saturday, 07 June 2026 | TIME: 2:00 PM | LOCATION: Nairobi (venue shared prior)
+DATE: Sunday, 07 June 2026 | TIME: 2:00 PM | LOCATION: Nairobi, Kenya | Former AMREF UNIVERSITY (NOW SUNSHINE SCHOOL), OPPOSITE NAIROBI WILSON AIRPORT. ON LANG'ATA ROAD.
 
 Come expectant. Come Ready. See you on the 7th.
 
-— The EKB Team
-📞 +254 795 582 978 | Partner via M-Pesa Till: 311112`}],
+— The FL02 Team
+ +254 795 582 978 | Partner via M-Pesa Till: 311112`}],
       mcp_servers:[{type:'url',url:'https://gmailmcp.googleapis.com/mcp/v1',name:'gmail'}]
     })
   });
 }
 
 function waShare(){
-  const t=`*Every Knee Bow – Worship Experience (2nd Edition)*\n🗓 Sunday, 07 June 2026 · 2:00 PM\n📍 Nairobi, Kenya\n\n_Register FREE:_ ${window.location.href}\n\n_Every knee shall bow. Every tongue shall confess._ `;
+  const t=`*Father's Love– Worship Experience (2nd Edition)*\n🗓 Sunday, 07 June 2026 · 2:00 PM\n📍 Nairobi, Kenya\n\n_Register FREE:_ ${window.location.href}\n\n_Every knee shall bow. Every tongue shall confess._ `;
   window.open(`https://wa.me/?text=${encodeURIComponent(t)}`,'_blank');
 }
 function copyLink(){
